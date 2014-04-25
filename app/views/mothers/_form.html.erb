@@ -11,23 +11,25 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :surname %><br />
-    <%= f.text_field :surname %>
-  </div>
-  <div class="field">
-    <%= f.label :age %><br />
-    <%= f.number_field :age %>
-  </div>
-  <div class="field">
-    <%= f.label :job %><br />
-    <%= f.text_field :job %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="input-group">
+    <div class="field">
+      <%= f.text_field :name, :class => "form-control", 
+      :placeholder => "Name"%>
+    </div>
+    <div class="field">
+      <%= f.text_field :surname, :class => "form-control", 
+      :placeholder => "Surname" %>
+    </div>
+    <div class="field">
+      <%= f.number_field :age, :class => "form-control", 
+      :placeholder => "Age" %>
+    </div>
+    <div class="field">
+      <%= f.text_field :job, :class => "form-control", 
+      :placeholder => "Job" %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Submit", :class => "btn btn-warning" %>
+    </div>
   </div>
 <% end %>

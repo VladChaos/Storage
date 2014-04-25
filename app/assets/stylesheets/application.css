@@ -9,5 +9,21 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require bootstrap_and_overrides
+
  */
+ .row{
+ 	margin-top: 70px;
+ 	width:80% !important;
+ 	margin-left: 125px !important;
+ 	margin-right: 125px !important;
+ 	background-color: #3B743B !important;
+ }
+ body{
+ 	background-image: url(image1.jpg);
+ 	color:#00ff00 !important;
+ 	text-align: center;
+ }
+ footer{
+ 	margin-top: 50px;
+ }

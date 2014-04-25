@@ -2,5 +2,7 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @child %> |
-<%= link_to 'Back', children_path %>
+<div class="btn-group">
+	<%= link_to 'Show', @child, :class=>"btn btn-success" %>
+	<%= link_to 'Back', children_path, :class=>"btn btn-success" %>
+</div>	

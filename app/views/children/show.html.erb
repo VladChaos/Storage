@@ -1,23 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b class="label label-info">Name</b>
   <%= @child.name %>
 </p>
 
 <p>
-  <b>Surname:</b>
+  <b class="label label-info">Surname</b>
   <%= @child.surname %>
 </p>
 
 <p>
-  <b>Age:</b>
+  <b class="label label-info">Age</b>
   <%= @child.age %>
 </p>
 <p>
-	<b>Mother name:</b>
+	<b class="label label-info">Mother name</b>
 	<%= @child.mother.name %>
 </p>
-
-<%= link_to 'Edit', edit_child_path(@child) %> |
-<%= link_to 'Back', children_path %>
+<div class="btn-group">
+	<%= link_to 'Edit', edit_child_path(@child), :class=>"btn btn-success" %>
+	<%= link_to 'Back', children_path, :class=>"btn btn-success" %>
+</div>

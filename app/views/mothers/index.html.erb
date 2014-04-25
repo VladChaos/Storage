@@ -1,6 +1,6 @@
 <h1>Listing mothers</h1>
 
-<table>
+<table class="table">
   <tr>
     <th>Name</th>
     <th>Surname</th>
@@ -18,15 +18,17 @@
     <td><%= mother.surname %></td>
     <td><%= mother.age %></td>
     <td><%= mother.job %></td>
-    <td><%= link_to 'Show', mother %></td>
-    <td><%= link_to 'Edit', edit_mother_path(mother) %></td>
-    <td><%= link_to 'Destroy', mother, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <td><%= link_to 'Add a Child', {:controller => :children, :action => :new, :mother_id => mother.id} %></td>
+    <td><%= link_to 'Show', mother, :class=>"btn btn-primary" %></td>
+    <td><%= link_to 'Edit', edit_mother_path(mother), :class=>"btn btn-primary" %></td>
+    <td><%= link_to 'Add a Child', {:controller => :children, :action => :new, :mother_id => mother.id}, :class=>"btn btn-primary" %></td>
+    <td><%= link_to 'Destroy', mother, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-danger" %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Mother', new_mother_path %> |
-<%= link_to 'Listing Children', children_path %>
+<div class="btn-group">
+    <%= link_to 'New Mother', new_mother_path, :class=>"btn btn-success" %>
+    <%= link_to 'Listing Children', children_path, :class=>"btn btn-success" %>
+    <%= link_to 'Home', {:controller => :welcome, :action => :index}, :class=>"btn btn-success" %>
+</div>

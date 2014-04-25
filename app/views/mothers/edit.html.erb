@@ -1,6 +1,7 @@
 <h1>Editing mother</h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @mother %> |
-<%= link_to 'Back', mothers_path %>
+<div class="btn-group">
+	<%= link_to 'Show', @mother, :class=>"btn btn-success" %>
+	<%= link_to 'Back', mothers_path, :class=>"btn btn-success" %>
+</div>

@@ -1,26 +1,26 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b class="label label-info">Name</b>
   <%= @mother.name %>
 </p>
 
 <p>
-  <b>Surname:</b>
+  <b class="label label-info">Surname</b>
   <%= @mother.surname %>
 </p>
 
 <p>
-  <b>Age:</b>
+  <b class="label label-info">Age</b>
   <%= @mother.age %>
 </p>
 
 <p>
-  <b>Job:</b>
+  <b class="label label-info">Job</b>
   <%= @mother.job %>
 </p>
 
-<table>
+<table class="table">
   <h4>Children:</h4>
   <tr>
     <th>Name</th>
@@ -36,6 +36,7 @@
   </tr>
 <% end %>
 </table>
-
-<%= link_to 'Edit', edit_mother_path(@mother) %> |
-<%= link_to 'Back', mothers_path %>
+<div class="btn-group">
+  <%= link_to 'Edit', edit_mother_path(@mother), :class=>"btn btn-success" %>
+  <%= link_to 'Back', mothers_path, :class=>"btn btn-success" %>
+</div>
