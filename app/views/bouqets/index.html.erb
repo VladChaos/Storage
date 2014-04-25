@@ -1,0 +1,26 @@
+<h1>All Bouqets</h1>
+
+<table class="table">
+  <tr>
+    <th>Flower's name</th>
+    <th>Amount of flowers</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bouqets.each do |bouqet| %>
+  <tr>
+    <td><%= bouqet.name %></td>
+    <td><%= bouqet.amount %></td>
+    <td><%= link_to 'Show', bouqet, :class=>"btn btn-primary" %></td>
+    <td><%= link_to 'Edit', edit_bouqet_path(bouqet), :class=>"btn btn-primary" %></td>
+    <td><%= link_to 'Destroy', bouqet, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-danger" %></td>
+  </tr>
+<% end %>
+</table>
+
+<div class="btn-group">
+	<a href="bouqets/new" class="btn btn-success">New Bouqet</a>
+	<%= link_to 'Home', {:controller => :welcome, :action => :index}, :class=>"btn btn-success" %>
+</div>

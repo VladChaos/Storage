@@ -1,0 +1,36 @@
+<html>
+	<p>
+	  <b class="label label-info">Flower's Name</b>
+	  <%= @bouqet.name %>
+	</p>
+
+	<p>
+	  <b class="label label-info">Flower's Cost</b>
+	  <%= @bouqet.cost %>
+	</p>
+
+	<p>
+	  <b class="label label-info">Amount of Flowers</b>
+	  <%= @bouqet.amount %>
+	</p>
+	<body>
+		<p>
+		  <b class="label label-info">Bouqet's Cost</b>
+		  <%= @money %>
+		</p>
+	</body>
+
+	<%= link_to 'Back', bouqets_path, :class=>"btn btn-success" %>
+	<input id="myElement" type="button" value="Verify Bouqet" class="btn btn-warning"/>
+		<script>
+			document.getElementById('myElement').onclick = function()
+			{
+				if ((<%= @money %>)>=100) {
+					alert('Nice bouqet!');
+				}
+				else {
+					alert('Bad bouqet!');
+				}
+			}
+		</script>
+</html>

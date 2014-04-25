@@ -11,15 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140418090049) do
+ActiveRecord::Schema.define(:version => 20140425073926) do
+
+  create_table "bouqets", :force => true do |t|
+    t.string   "name"
+    t.float    "cost"
+    t.integer  "amount"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "children", :force => true do |t|
     t.string   "name"
     t.string   "surname"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.integer  "mother_id"
     t.integer  "age"
+    t.integer  "mother_id"
   end
 
   create_table "mothers", :force => true do |t|

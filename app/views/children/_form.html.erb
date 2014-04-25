@@ -11,17 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :surname %><br />
-    <%= f.text_field :surname %>
-  </div>
-  <div class="field">
-    <%= f.label :age %><br />
-    <%= f.text_field :age %>
+  <div class="input-group">
+    <div class="field">
+      <%= f.text_field :name, :class => "form-control", 
+      :placeholder => "Name" %>
+    </div>
+    <div class="field">
+      <%= f.text_field :surname, :class => "form-control", 
+      :placeholder => "Surame"%>
+    </div>
+    <div class="field">
+      <%= f.text_field :age, :class => "form-control", 
+      :placeholder => "Age" %>
+    </div>
   </div>
   
   <div class="actions">

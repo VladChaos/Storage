@@ -1,0 +1,27 @@
+<h1>Editing Bouqet</h1>
+
+<%= form_for(@bouqet) do |f| %>
+  <div class="input-group">
+    <div class="field">
+      <%= f.text_field :name, :class => "form-control", 
+        :placeholder => "Flower's Name" %>
+    </div>
+    <div class="field">
+      <%= f.text_field :cost, :class => "form-control", 
+        :placeholder => "Flower's Cost" %>
+    </div>
+    <div class="field">
+      <%= f.text_field :amount, :class => "form-control", 
+        :placeholder => "Amount of Flowers" %>
+    </div>
+  </div>
+ 
+  <p>
+    <%= f.submit "Submit", :class => "btn btn-warning" %>
+  </p>
+<% end %> 
+
+<div class="btn-group">
+  <%= link_to 'Back', bouqets_path, :class=>"btn btn-success" %>
+  <%= link_to 'Home', {:controller => :welcome, :action => :index}, :class=>"btn btn-success" %>
+</div>  
