@@ -9,6 +9,8 @@ Aaa::Application.routes.draw do
   end
   
   resources :bouqets
+  get "/cost", :to => "bouqets#cost"
+  
   
   get "welcome/index"
   root :to => 'welcome#index'

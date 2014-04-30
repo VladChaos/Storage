@@ -7,6 +7,7 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
 
 <% @bouqets.each do |bouqet| %>
@@ -16,6 +17,8 @@
     <td><%= link_to 'Show', bouqet, :class=>"btn btn-primary" %></td>
     <td><%= link_to 'Edit', edit_bouqet_path(bouqet), :class=>"btn btn-primary" %></td>
     <td><%= link_to 'Destroy', bouqet, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-danger" %></td>
+    <td><%= link_to 'Bouqet\'s cost', "#", :id => bouqet.id, 
+    :class => "btn btn-warning cost" %></td>
   </tr>
 <% end %>
 </table>

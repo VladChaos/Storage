@@ -47,7 +47,7 @@ class BouqetsController < ApplicationController
 		        format.json { render json: @bouqet.errors, status: :unprocessable_entity }
 		    end
 	    end
-	  end
+	end
 
 	def show
 		@bouqet = Bouqet.find(params[:id])
@@ -67,5 +67,9 @@ class BouqetsController < ApplicationController
 	      format.html { redirect_to bouqets_url }
 	      format.json { head :no_content }
 	    end
-	  end
+	end
+	def cost
+		@bouqet = Bouqet.find(params[:id])
+		@money = (@bouqet.cost*@bouqet.amount)
+	end
 end

@@ -13,3 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+$(document).ready(function() {
+  $(".cost").click(function() {
+    $.ajax({
+      url: "/cost",
+      data: {
+        id: $(this).attr("id")
+      }
+    });
+  });
+});
