@@ -41,3 +41,4 @@ gem "less-rails"
 gem "twitter-bootstrap-rails", :git => 'https://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem "heroku"
 gem 'rails_12factor', group: :production
+gem 'bootstrap_helper'
