@@ -1,21 +1,21 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: aaa777_development
+  database: mysterious-taiga-8033_development
   pool: 5
   username: ubuntu0
   password:
 test:
   adapter: postgresql
   encoding: unicode
-  database: aaa777_test
+  database: mysterious-taiga-8033_test
   pool: 5
   username: ubuntu0
   password:
 production:
   adapter: postgresql
   encoding: unicode
-  database: aaa777_production
+  database: mysterious-taiga-8033_production
   pool: 5
   username: ubuntu0
   password:
